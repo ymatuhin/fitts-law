@@ -1,0 +1,22 @@
+<div ng-if="rezult[3].type0.length > 0 && rezult[3].type1.length > 0 && rezult[3].type2.length > 0 && rezult[3].type3.length > 0">
+	<p>У вас есть другое устройства ввода, подключенное к компьютеру помимо используемого вами в эксперименте № 4? <br> (это может быть мышь или трекпад, трекбол, сенсорный экран или TrackPoint)</p>
+
+	<br>
+
+	<p>
+		<a href="#/21" class="btn big" ng-click='changeDevice(true)' style="width: 100px">Да</a>
+		<a href="#/21" class="btn big" ng-click='changeDevice(false)' style="width: 100px">Нет</a>
+	</p>
+</div>
+
+<div ng-if="rezult[3].type0.length == 0 || rezult[3].type1.length == 0 || rezult[3].type2.length == 0 || rezult[3].type3.length == 0">
+	<p>Для последнего эксперимента, вам необходимо пройти эксперимент № 4.</p>
+
+	<br>
+
+	<p>
+		<a href="#/14" class="btn big" style="width: 150px">Пройти</a>
+		<a href="#/24" class="btn big" style="width: 150px">Пропустить</a>
+	</p>
+</div>
+

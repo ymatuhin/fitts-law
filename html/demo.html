@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+<title>{{ pageList[page.current - 1].title }}</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/style.css">
+
+
+<table class="centered"><tr><td>
+
+	<h1>Демонстрация закона Хикка</h1>
+
+	<div class="app">
+
+		<div id="test" class="test"></div>
+
+		<div class="bottomLine">
+			<div class="left">
+				<a href="#/{{page.prev}}" ng-show="page.prev >= page.min" class="btn prev">← Назад</a>
+			</div>
+
+			<p class="tooltip">Нажмите сюда когда будете готовы<i>↓</p>
+			<div class="right">
+				<a href="#/{{page.next}}" ng-show="page.next <= page.max" class="btn big next">Вперед →</a>
+			</div>
+
+
+			<div class="middle">
+				<select
+					ng-model="selectModel"
+					ng-options="c.id as c.title for c in pageList"
+					ng-change="changeSelect(selectModel)">
+				</select>
+			</div>
+		</div>
+
+	</div>
+
+</td></tr></table>
+
+
+
+<script src="../js/assets/jquery-1.11.1.min.js"></script>
+<script src="../js/experiment.js"></script>
+
+<script>
+
+	function logData (data) {
+		console.log(data);
+	}
+	var exp = new Experiment({changeDistance: true, size: true, callback: logData, noDevice: true, colorNumb: 1});
+
+</script>
+
+</html>
