@@ -219,12 +219,13 @@ Experiment.prototype.addBallPair = function(colorNumb, noDevice) {
 			moveTimer = setTimeout(function () {
 				time1 = new Date()
 
+				ball1[0].addClass('disable');
 				ball1[1].css('display', 'none');
 				ball2[0].removeClass('disable');
 				ball2[1].css('display', '');
 
 				moveTimer = null;
-			}, 1000);
+			}, 700);
 		});
 
 		ball1[0].mouseleave(function () {
@@ -243,7 +244,7 @@ Experiment.prototype.addBallPair = function(colorNumb, noDevice) {
 			ball2[1].remove();
 
 			var time2 = new Date()
-			var delta = time2 - time1;
+			var delta = time2 - time1 + 700;
 
 
 			self.time['type' + numb].push(delta);
@@ -264,6 +265,7 @@ Experiment.prototype.addBallPair = function(colorNumb, noDevice) {
 		});
 	} else {
 		ball1[0].click(function () {
+			ball1[0].addClass('disable');
 			ball1[1].css('display', 'none');
 			ball2[0].removeClass('disable');
 			ball2[1].css('display', '');
