@@ -1,4 +1,4 @@
-app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute']);
 
 app.config([
   '$routeProvider', function($routeProvider, $routeParams) {
@@ -21,5 +21,5 @@ app.config([
 ]);
 
 app.run(function($rootScope) {
-  $rootScope.hasDevice = true
+  $rootScope.hasDevice = true;
 });

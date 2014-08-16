@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 function getRandomInt (min, max) {
 	var rand = min + Math.random()*(max+1-min);
 	return rand = rand^0;
