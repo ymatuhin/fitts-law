@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html ng-app="app">
-<title>{{ pageList[page.current - 1].title }}</title>
 <meta charset="UTF-8">
+<title ng-bind="pageList[page.current - 1].title">Интерактивная демонстрация Закона Фиттса</title>
+<meta name="description" content="Закон Фиттса позволяет прогнозировать время, необходимое пользователю для указания (наведения) на объект, используя определенные указательные (координатные) устройства (например, мышь, трекпад, перо или даже палец).">
+<meta name="viewport" content="width=860">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
 <link rel="stylesheet" href="css/style.css">
-
 
 <table class="centered"><tr><td>
 
@@ -14,8 +16,6 @@
 		<table class="content">
 			<tr><td class="content-item"><ng-view></ng-view>
 		</table>
-
-
 
 		<div class="bottomLine">
 			<div class="left">
@@ -52,8 +52,10 @@
 <script src="js/assets/angular.min.js"></script>
 <script src="js/assets/angular-route.min.js"></script>
 <script src="js/experiment.js"></script>
-<script src="js/gremlins.min.js"></script>
+<!-- <script src="js/gremlins.min.js"></script> -->
 
 <script src="js/app.js"></script>
 <script src="js/indexCtrl.js"></script>
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter30205524 = new Ya.Metrika({id:30205524, clickmap:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/30205524" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </html>

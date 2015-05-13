@@ -1,7 +1,19 @@
 html, body {
 	height: 100%;
+	min-height: 600px;
 	margin: 0;
-	background: url(bg21.jpg) 50% 50%
+	background: url(bg21.jpg) 50% 50%;
+}
+
+html {
+	width: 100%;
+	min-width: 860px;
+
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -10,6 +22,9 @@ img {
 
 body {
 	font-family: Cambria, Georgia, serif;
+	position: relative;
+	min-width: 860px;
+	margin: 0 auto;
 }
 
 .content {
